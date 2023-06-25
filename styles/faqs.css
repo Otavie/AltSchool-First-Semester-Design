@@ -1,0 +1,199 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+:root {
+  --ff-boldest: 'Gilroy-Heavy', sans-serif;
+  --ff-bold: 'Gilroy-Bold', sans-serif;
+  --ff-medium: 'Gilroy-Medium', sans-serif;
+  --ff-regular: 'Gilroy-Regular', sans-serif;
+  --ff-lightest: 'Gilroy-Light', sans-serif;
+  --ff-semi-bold: 'Gilroy-SemiBold', sans-serif;
+  --color-primary-blue: #0065FE;
+  --color-primary-black: #141414;
+  --color-primary-white: #FFF;
+  --fs-h1: 2.5rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.5rem;
+}
+
+.faqs-container {
+  min-height: 10vh;
+  width: 100%;
+  position: relative;
+}
+
+.faqs-blob-left {
+  position: absolute;
+  left: 0;
+  top: -4.5rem;
+}
+
+.faqs-blob-left img {
+  width: 100%;
+}
+
+.faqs-blob-right {
+  position: absolute;
+  right: 0;
+  bottom: -9.69rem;
+}
+
+.faqs-blob-right img {
+  width: 100%;
+}
+
+.faqs {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+  min-height: 100vh;
+  margin-top: 2.69rem;
+  margin-bottom: 9.69rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.faqs h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 1rem;
+  position: relative;
+  margin-left: 1rem;
+  text-align: center;
+  font-family: var(--ff-bold);
+}
+
+.faqs-content {
+  width: 100%;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+details {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+details summary, details div {
+  margin-bottom: 1rem;
+}
+
+details p {
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+summary div {
+  width: calc(100% - 3rem);
+}
+
+summary::before {
+  content: '+';
+}
+
+summary::before,
+summary::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  font-size: var(--fs-h3);
+  color: var(--color-primary-black);
+}
+
+details[open] > summary::before {
+  content: '';
+}
+
+details[open] > summary::after {
+  content: '-';
+}
+
+.revolution-container {
+  height: 18.6875rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(99.99%, #1E3448), to(rgba(30, 52, 72, 0)));
+  background: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.revolution-container .revolution {
+  height: 18rem;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.revolution-container .revolution h2 {
+  color: var(--color-primary-white);
+  margin-bottom: 2rem;
+  font-size: var(--fs-h2);
+  text-align: center;
+}
+
+.revolution-container .revolution .getting-started-button {
+  padding-right: 2.125rem;
+  padding-left: 2.125rem;
+}
+
+.revolution-blob-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.revolution-blob-left img {
+  width: 100%;
+}
+
+.revolution-blob-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.revolution-blob-right img {
+  width: 100%;
+}

@@ -1,0 +1,272 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+:root{
+    --ff-boldest: 'Gilroy-Heavy', sans-serif;
+    --ff-bold: 'Gilroy-Bold', sans-serif;
+    --ff-medium: 'Gilroy-Medium', sans-serif;
+    --ff-regular: 'Gilroy-Regular', sans-serif;
+    --ff-lightest: 'Gilroy-Light', sans-serif;
+    --ff-semi-bold: 'Gilroy-SemiBold', sans-serif;
+    --color-primary-blue: #0065FE;
+    --color-primary-black: #141414;
+    --color-primary-white: #FFF;
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+}
+
+@mixin h2-after{
+    left: 1rem;
+    position: absolute;                
+}
+
+@mixin h2-before{
+    content: "";
+    width: 4px;
+    height: 35px;
+    background: linear-gradient(180deg, #1E3448, #1e344850, #ffffff);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1rem;
+}
+
+footer{
+    min-height: 35.0625rem;
+    position: relative;
+    width: 100%;
+}
+
+.footer-blob-left,
+.footer-blob-right{
+    position: absolute;
+}
+
+.footer-blob-left{
+    bottom: 0;
+    left: 0;
+
+    img{
+        width: 100%;
+    }
+}
+
+.footer-blob-right{
+    bottom: 0;
+    right: 0;
+
+    img{
+        width: 100%;
+    }
+}
+
+.footer-container{
+    margin: 0 auto;
+    padding-top: 5.94rem;
+    width: 90%;
+    min-height: 24.0025rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.footer-left{
+    width: 184px;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: flex-start;
+
+    img{
+        height: 2.5rem;
+        cursor: pointer;    
+    }
+}
+
+.footer-socials{
+    margin-top: 1.5rem;
+    width: inherit;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+    img{
+        height: 1.5rem;
+        cursor: pointer;    
+    }
+    
+}
+
+.footer-left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-right div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
+
+.footer-right div ul li{
+    text-align: center;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.footer-right ul li{
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.footer-why-scissor,
+.footer-resources,
+.footer-solutions,
+.footer-features,
+.footer-products,
+.footer-legal,
+.footer-company{
+    min-width: 90px;
+
+    h4{
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+}
+
+.copyright-container{
+    position: relative;
+    min-height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+@media only screen and (min-width: 500px){
+    .footer-left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-right{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .footer-right div{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footer-right div ul li{
+        text-align: left;
+    }
+
+    
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        width: 90%;
+    }
+
+}
+
+
+@media only screen and (min-width: 735px){
+    .footer-container{
+        width: 80%;
+    }
+
+    .footer-left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-right{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+        
+}
+
+@media only screen and (min-width: 845px){
+    .footer-container{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .footer-left{
+        display: block;
+    }
+
+    .footer-right{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1050px){
+    .footer-right{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .copyright-container{
+        position: relative;
+        min-height: 5.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .copyright{
+            width: 80%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }    
+
+}

@@ -1,0 +1,227 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+:root{
+    --ff-boldest: 'Gilroy-Heavy', sans-serif;
+    --ff-bold: 'Gilroy-Bold', sans-serif;
+    --ff-medium: 'Gilroy-Medium', sans-serif;
+    --ff-regular: 'Gilroy-Regular', sans-serif;
+    --ff-lightest: 'Gilroy-Light', sans-serif;
+    --ff-semi-bold: 'Gilroy-SemiBold', sans-serif;
+    --color-primary-blue: #0065FE;
+    --color-primary-black: #141414;
+    --color-primary-white: #FFF;
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+}
+
+@mixin h2-after{
+    left: 1rem;
+    position: absolute;                
+}
+
+@mixin h2-before{
+    content: "";
+    width: 4px;
+    height: 35px;
+    background: linear-gradient(180deg, #1E3448, #1e344850, #ffffff);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1rem;
+}
+
+
+.pricing-section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-header{
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 4.25rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-header h2{
+    font-size: var(--fs-h2);
+    margin-bottom: 1rem;
+    position: relative;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.pricing-header p{
+    text-align: center;
+}
+
+h2:after{
+    @include h2-after;
+}
+
+h2:before{
+    @include h2-before;
+}
+
+.pricing-list-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.basic-price ul li,
+.professional-price ul li,
+.teams-price ul li{
+    text-indent: -0.125rem;
+}
+
+.basic-price,
+.professional-price,
+.teams-price{
+    min-height: 400px;
+    border: 0.4px solid var(--primary-400, #005AE2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.professional-price{
+    min-height: 600px;
+    border: 0.4px solid #1E3448;
+    background: var(--linear-gradient, linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0.00) 100%));
+    color: var(--color-primary-white);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.image-white-check li,
+.image-blue-check li{
+    line-height: 0.875rem;
+    background-image: url('/imgs/blue-check.png');
+    background-repeat: no-repeat;
+    background-size: 0.75rem 0.75rem;
+    background-position: left corner;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.image-blue-check li{
+    background-image: url('/imgs/white-check.png');
+}
+
+.basic-price-inner,
+.professional-price-inner,
+.teams-price-inner{
+    min-width: 200px;
+    margin: 50px 0;
+}
+
+.professional-price-header{
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.professional-price-header h2{
+    margin-bottom: -1.125rem;
+    font-size: var(--fs-h2);
+}
+
+
+.basic-price-content,
+.professional-price-content,
+.team-price-content{
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.basic-price-content li:not(:last-child),
+.professional-price-content li:not(:last-child),
+.team-price-content li:not(:last-child){
+    margin: 1.5rem 0;
+    line-height: 0.875rem;
+}
+
+
+.price-button-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 7rem;
+    margin-top: 4.25rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.custom-price-button{
+    border: 1px solid var(--color-primary-blue);
+    background: none;
+    transition: border 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.custom-price-button:hover{
+    color: var(--color-primary-black);
+    border-radius: 50px;
+    border: 1px solid var(--color-primary-black);
+}
+
+@media only screen and (min-width: 500px){
+    .price-button-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1.25rem;
+        margin-bottom: 7rem;
+        margin-top: 4.25rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 800px){
+    
+    .pricing-list-container{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 1fr;
+        margin: 0 auto;
+        align-items: center;
+    }
+                
+}
+
+@media only screen and (min-width: 845px){
+  .pricing-list-container{
+        width: 80%;
+    }
+
+    .basic-price-inner,
+    .professional-price-inner,
+    .teams-price-inner{
+        width: 70%;
+    }
+
+}
+
+@media only screen and (min-width: 950px){
+    .pricing-header{
+        width: 50%;    
+    }
+
+    .pricing-list-container{
+        width: 80%;
+    }    
+
+}
