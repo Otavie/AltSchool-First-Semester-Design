@@ -52,10 +52,23 @@ body {
 
 .logo-container {
   height: 40px;
-  z-index: 2;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
 }
 
 .logo-container img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 30px;
   cursor: pointer;
   -webkit-transition: -webkit-transform ease-in-out 0.5s;
@@ -83,13 +96,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   overflow-x: hidden;
-  display: none;
+  background-color: rgba(255, 0, 0, 0.7);
+  background-color: white;
+  z-index: 3;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform ease-in-out 0.5s;
+  transition: -webkit-transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+}
+
+#menu-toggle:checked ~ .menu-container {
+  left: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 nav ul {
@@ -456,40 +483,30 @@ button {
           transform: perspective(100px) rotateX(30deg);
 }
 
-.mobile-menu {
-  height: 40px;
-  width: 40px;
-  position: relative;
-  z-index: 4;
-}
-
 input[type="checkbox"] {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  right: 10%;
   display: block;
   width: 40px;
   height: 40px;
+  z-index: 4;
   visibility: hidden;
 }
 
 #menu-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: fixed;
+  right: 10%;
   display: block;
   width: 40px;
   height: 40px;
   border: 1px solid var(--color-primary-blue);
+  border-radius: 5px;
   background-image: url("/imgs/menu.png");
   background-repeat: no-repeat;
-  background-size: 32px 32px;
+  background-size: 26px 32px;
   background-position: center center;
   cursor: pointer;
+  z-index: 4;
 }
 
 @media only screen and (min-width: 500px) {
@@ -507,16 +524,31 @@ input[type="checkbox"] {
     gap: 2rem;
     margin-top: 2.5rem;
   }
+  .features-anchor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .features-anchor img {
+    height: 22px;
+    margin-left: 2px;
+  }
 }
 
 @media only screen and (min-width: 845px) {
-  .mobile-menu {
+  #menu-icon,
+  #menu-toggle {
     display: none;
   }
   .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .upper-section-write-up h1 {
     font-size: 2.5rem;
@@ -553,6 +585,7 @@ input[type="checkbox"] {
             flex-direction: row;
     position: relative;
     width: auto;
+    background-color: red;
   }
   .menu-container nav ul {
     -webkit-box-orient: horizontal;
@@ -560,6 +593,9 @@ input[type="checkbox"] {
         -ms-flex-direction: row;
             flex-direction: row;
     height: 45px;
+  }
+  .menu-container nav .login-container-inside {
+    display: none;
   }
   .menu-container nav ul li {
     list-style: none;
@@ -572,12 +608,9 @@ input[type="checkbox"] {
     display: -ms-flexbox;
     display: flex;
   }
-  .menu-container nav ul li a img {
+  .features-anchor img {
     height: 22px;
     margin-left: 2px;
-  }
-  .menu-container nav .login-container-inside {
-    display: none;
   }
   .login-container-outside {
     display: -webkit-box;
