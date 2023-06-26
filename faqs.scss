@@ -35,6 +35,7 @@
     min-height: 10vh;
     width: 100%;
     position: relative;
+    padding-bottom: 9.69rem;
 }
 
 .faqs-blob-left{
@@ -50,7 +51,7 @@
 .faqs-blob-right{
     position: absolute;
     right: 0;
-    bottom: -9.69rem;
+    bottom: -10px;
 
     img{
         width: 100%;
@@ -63,7 +64,6 @@
     max-width: 800px;
     min-height: 100vh;
     margin-top: 2.69rem;
-    margin-bottom: 9.69rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -178,7 +178,8 @@ details[open] > summary::after{
 .revolution-blob-right{
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -10px;
+    z-index: 1;
 
     img{
         width: 100%;

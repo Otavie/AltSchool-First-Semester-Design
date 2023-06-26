@@ -485,6 +485,7 @@ input[type="checkbox"] {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 2rem;
+    margin-top: 2.5rem;
   }
 }
 

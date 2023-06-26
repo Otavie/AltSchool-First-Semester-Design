@@ -35,6 +35,8 @@ footer{
     min-height: 35.0625rem;
     position: relative;
     width: 100%;
+    background-color: var(--color-primary-white);
+    z-index: 2;
 }
 
 .footer-blob-left,
@@ -69,6 +71,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
+    position: relative;
 }
 
 .footer-left{
