@@ -142,6 +142,10 @@ h2:before {
   margin: 50px 0;
 }
 
+.professional-price-inner {
+  margin-top: -10px;
+}
+
 .professional-price-header {
   min-height: 120px;
   display: -webkit-box;
