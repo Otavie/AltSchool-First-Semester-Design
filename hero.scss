@@ -204,7 +204,6 @@ button{
     text-align: center;
     font-size: 2rem;
     line-height: 3rem;
-    margin: 1.5rem 0;
 }
 
 .upper-section-write-up p{
@@ -214,6 +213,22 @@ button{
     line-height: 1.5;
 }
 
+.blue-strike-container{
+    margin-top: -0.35rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    margin-left: 10px;
+}
+
+.blue-strike{
+    width: 110px;
+}
+
+.blue-strike img{
+    width: 100%;
+}
 
 .lower-section-content{
     min-height: 40vh;
@@ -430,6 +445,12 @@ input[type="checkbox"]{
                 li a{
                     text-decoration: none;
                     color: var(--color-primary-black);
+                    display: flex;
+
+                    img{
+                        height: 22px;
+                        margin-left: 2px;
+                    }
                 }
             }  
             
@@ -459,6 +480,12 @@ input[type="checkbox"]{
 }
 
 @media only screen and (min-width: 890px){
+    .header-container{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1050px){
     .header-container{
         width: 80%;
     }
