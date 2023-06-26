@@ -82,7 +82,6 @@ body{
 }
 
 #menu-toggle:checked ~ .menu-container{
-    left: 0;
     transform: translateX(0%);
 }
 

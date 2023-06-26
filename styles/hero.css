@@ -114,7 +114,6 @@ body {
 }
 
 #menu-toggle:checked ~ .menu-container {
-  left: 0;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
