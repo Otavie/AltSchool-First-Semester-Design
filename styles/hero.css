@@ -52,14 +52,13 @@ body {
 
 .logo-container {
   height: 40px;
-  z-index: 4;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
 }
 
 .logo-container img {
@@ -96,17 +95,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 100%;
   right: 0;
   bottom: 0;
   overflow-x: hidden;
-  background-color: rgba(255, 0, 0, 0.7);
   background-color: white;
   z-index: 3;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
   -webkit-transition: -webkit-transform ease-in-out 0.5s;
   transition: -webkit-transform ease-in-out 0.5s;
   transition: transform ease-in-out 0.5s;
@@ -114,8 +110,7 @@ body {
 }
 
 #menu-toggle:checked ~ .menu-container {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  left: 0;
 }
 
 nav ul {
@@ -493,7 +488,7 @@ input[type="checkbox"] {
 }
 
 #menu-icon {
-  position: fixed;
+  position: absolute;
   right: 10%;
   display: block;
   width: 40px;
@@ -506,6 +501,17 @@ input[type="checkbox"] {
   background-position: center center;
   cursor: pointer;
   z-index: 4;
+}
+
+.features-anchor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features-anchor img {
+  height: 22px;
+  margin-left: 2px;
 }
 
 @media only screen and (min-width: 500px) {
@@ -584,7 +590,6 @@ input[type="checkbox"] {
             flex-direction: row;
     position: relative;
     width: auto;
-    background-color: red;
   }
   .menu-container nav ul {
     -webkit-box-orient: horizontal;
